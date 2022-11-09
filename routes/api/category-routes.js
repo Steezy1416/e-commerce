@@ -17,7 +17,6 @@ router.get('/', (req, res) => {
   })
   .then(categoryData => res.json(categoryData))
   .catch(err => {
-    console.log(err)
     res.status(500).json(err)
   })
 });
@@ -56,7 +55,7 @@ router.post('/', (req, res) => {
   })
   .then(categoryData => res.json(categoryData))
   .catch(err => {
-    res.status(500).json(err)
+    res.status(400).json(err)
   })
 });
 
